@@ -33,15 +33,15 @@ Glossary
         connection object or an object that delivers email messages. In Symfony2,
         services are often configured and retrieved from the service container.
         An application that has many decoupled services is said to follow
-        a `service-oriented architecture`_.
+        a `arquitectura orientada a servicios`_.
 
-   Service Container
-        A *Service Container*, also known as a *Dependency Injection Container*,
-        is a special object that manages the instantiation of services inside
-        an application. Instead of creating services directly, the developer
-        *trains* the service container (via configuration) on how to create
-        the services. The service container takes care of lazily instantiating
-        and injecting dependent services.
+   Contenedor de Servicios
+        Un *Contenedor de Servicios*, también conocido como *Contenedor de Inyección de Dependencias*,
+        es un objeto especial que administra la instanciación de servicios dentro de
+        una aplicación. En lugar de crear los servicios directamente, el desarrollador
+        *entrena* al contenedor de servicios (mediante configuración) sobre como crear
+        los servicios. El contenedor de servicios se encarga de instanciar e inyectar
+        los servicios dependientes según se requiera.
 
    HTTP Specification
         The *Http Specification* is a document that describes the Hypertext
@@ -51,6 +51,6 @@ Glossary
         that each may have. For more information, read the `Http Wikipedia`_
         article or the `HTTP 1.1 RFC`_.
 
-.. _`service-oriented architecture`: http://wikipedia.org/wiki/Service-oriented_architecture
-.. _`HTTP Wikipedia`: http://www.w3.org/Protocols/rfc2616/rfc2616.html
+.. _`arquitectura orientada a servicios`: http://es.wikipedia.org/wiki/Arquitectura_orientada_a_servicios
+.. _`HTTP Wikipedia`: http://es.wikipedia.org/wiki/HTTP
 .. _`HTTP 1.1 RFC`: http://www.w3.org/Protocols/rfc2616/rfc2616.html
