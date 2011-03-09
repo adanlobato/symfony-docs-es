@@ -6,19 +6,20 @@ Glossary
 .. glossary::
    :sorted:
 
-   Project
-        A *Project* is a directory composed of an Application, a set of
-        bundles, vendor libraries, an autoloader, and web front controller
-        scripts.
+   Proyecto
+        Un *Proyecto* es un directorio compuesto de una Aplicación, un grupo
+        de bundles, bibliotecas vendor, un autoloader, y scripts controladores
+        para la intefaz web.
 
-   Application
-        An *Application* is a directory containing the *configuration* for a
-        given set of Bundles.
+   Aplicación
+        Una *Aplicación* es un directorio que contiene la *configuración* de
+        un grupo específico de Bundles.
 
    Bundle
-        A *Bundle* is a structured set of files (PHP files, stylesheets,
-        JavaScripts, images, ...) that *implement* a single feature (a blog,
-        a forum, ...) and which can be easily shared with other developers.
+        Un *Bundle* es un grupo estructurado de archivos (archivos PHP, hojas
+        de estilo, JavaScripts, imágenes, ...) que *implementan* una única
+        característica (un blog, un foro, ...) y la cual pueda ser fácilmente
+        compartida con otros desarrolladores.
 
    Front Controller
         A *Front Controller* is a short PHP that lives in the web directory
