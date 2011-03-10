@@ -21,7 +21,7 @@ Glossary
         característica (un blog, un foro, ...) y la cual pueda ser fácilmente
         compartida con otros desarrolladores.
 
-   Front Controller
+   Controlador Frontal
         Un *Controlador Frontal* es un pequeño script PHP ubicado en el directorio web
         de su proyecto. Es típico que *todos* los requests sean manejados al ejecutar el
         mismo controlador frontal, cuyo trabajo es arrancar la aplicación en Symfony.
