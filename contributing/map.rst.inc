@@ -1,21 +1,21 @@
-* **Code**:
+* **Código**:
 
-  * :doc:`Bugs </contributing/code/bugs>` | 
-  * :doc:`Patches </contributing/code/patches>` | 
-  * :doc:`Security </contributing/code/security>` | 
-  * :doc:`Tests </contributing/code/tests>` | 
-  * :doc:`Coding Standards</contributing/code/standards>` | 
-  * :doc:`Code Conventions</contributing/code/conventions>` | 
-  * :doc:`License </contributing/code/license>`
+  * :doc:`Errores </contributing/code/bugs>` | 
+  * :doc:`Parches </contributing/code/patches>` | 
+  * :doc:`Seguridad </contributing/code/security>` | 
+  * :doc:`Pruebas </contributing/code/tests>` | 
+  * :doc:`Estándar de codificación </contributing/code/standards>` | 
+  * :doc:`Convenciones de código</contributing/code/conventions>` | 
+  * :doc:`Licencia </contributing/code/license>`
 
-* **Documentation**:
+* **Documentación**:
 
-  * :doc:`Overview </contributing/documentation/overview>` | 
-  * :doc:`Format </contributing/documentation/format>` | 
-  * :doc:`Translations </contributing/documentation/translations>` | 
-  * :doc:`License </contributing/documentation/license>`
+  * :doc:`Resumen </contributing/documentation/overview>` | 
+  * :doc:`Formato </contributing/documentation/format>` | 
+  * :doc:`Traducciones </contributing/documentation/translations>` | 
+  * :doc:`Licencia </contributing/documentation/license>`
 
-* **Community**:
+* **Comunidad**:
 
-  * :doc:`IRC Meetings </contributing/community/irc>` |
-  * :doc:`Other Resources </contributing/community/other>`
+  * :doc:`Reuniones IRC </contributing/community/irc>` |
+  * :doc:`Otros recursos </contributing/community/other>`
