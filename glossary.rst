@@ -21,19 +21,18 @@ Glossary
         característica (un blog, un foro, ...) y la cual pueda ser fácilmente
         compartida con otros desarrolladores.
 
-   Front Controller
-        A *Front Controller* is a short PHP that lives in the web directory
-        of your project. Typically, *all* requests are handled by executing
-        the same front controller, whose job is to bootstrap the Symfony
-        application.
+   Controlador Frontal
+        Un *Controlador Frontal* es un pequeño script PHP ubicado en el directorio web
+        de su proyecto. Es típico que *todos* los requests sean manejados al ejecutar el
+        mismo controlador frontal, cuyo trabajo es arrancar la aplicación en Symfony.
 
-   Service
-        A *Service* is a generic term for any PHP object that performs a
-        specific task. A service is usually used "globally", such as a database
-        connection object or an object that delivers email messages. In Symfony2,
-        services are often configured and retrieved from the service container.
-        An application that has many decoupled services is said to follow
-        a `arquitectura orientada a servicios`_.
+   Servicio
+        Un *Servicio* es un término genérico para cualquier objeto PHP que realice una
+        tarea específica. Los servicios suelen ser usados "globalmente", como por ejemplo
+        un objeto de conexión a una base de datos o uno que envíe correo electrónico.
+        En Symfony2, los servicios suelen ser configurados y obtenidos desde el contenedor
+        de servicios. Cuando una aplicación tiene muchos servicios que no dependen unos
+        de otros se dice que sigue una `arquitectura orientada a servicios`_.
 
    Contenedor de Servicios
         Un *Contenedor de Servicios*, también conocido como *Contenedor de Inyección de Dependencias*,
@@ -43,14 +42,14 @@ Glossary
         los servicios. El contenedor de servicios se encarga de instanciar e inyectar
         los servicios dependientes según se requiera.
 
-   HTTP Specification
-        The *Http Specification* is a document that describes the Hypertext
-        Transfor Protocol - a set of rules laying out the classic client-server
-        request-response communication. The specification defines the format
-        used for a request and response as well as the possible HTTP headers
-        that each may have. For more information, read the `Http Wikipedia`_
-        article or the `HTTP 1.1 RFC`_.
+   Especificación HTTP
+        La *Especificación Http* es un documento que describe el Protocolo de Transferencia
+        de Hipertexto - un grupo de reglas que describen la clásica comunicación cliente
+        servidor de petición-respuesta. La especificación define el formado utilizado por
+        las peticiones y las respuestas así como las posibles cabeceras HTTP que
+        puedan usar. Para más información, lea el artículo de la `Wikipedia sobre Http`_
+        o el `RFC HTTP 1.1`_.
 
 .. _`arquitectura orientada a servicios`: http://es.wikipedia.org/wiki/Arquitectura_orientada_a_servicios
-.. _`HTTP Wikipedia`: http://es.wikipedia.org/wiki/HTTP
-.. _`HTTP 1.1 RFC`: http://www.w3.org/Protocols/rfc2616/rfc2616.html
+.. _`Wikipedia sobre Http`: http://es.wikipedia.org/wiki/HTTP
+.. _`RFC HTTP 1.1`: http://www.w3.org/Protocols/rfc2616/rfc2616.html
