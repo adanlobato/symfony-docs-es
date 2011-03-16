@@ -12,4 +12,4 @@ Como ayudar
 5. Manda un pull request con tus cambios
 
 
-.. _traducciones.rst: traducciones.rst
+.. _traducciones.rst: symfony-docs-es/traducciones.rst
