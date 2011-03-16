@@ -5,7 +5,7 @@ Como ayudar
 -----------
 
 1. Crea un fork
-2. Revisa en `traducciones` para ver que documentos no están siendo
+2. Revisa el archivo `traducciones.rst` para ver que documentos no están siendo
    traducidos aún.
 3. Añadete en la lista y manda un pull request
 4. Una vez te den el visto bueno, comienza a traducir
