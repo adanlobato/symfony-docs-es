@@ -19,6 +19,10 @@ estilo para lograr uniformidad y coherencia.
 
 Se sugiere que acojamos las `normas de traducción del proyecto Debian`_
 
+Un aspecto importante que deben tener en cuenta los traductores es la
+práctica con el framework mientras traducen, con el objetivo de entender de mejor
+manera los documentos. 
+
 TODO: 
 
 * Construir un glosario de términos técnicos como referencia para la
