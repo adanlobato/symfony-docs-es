@@ -1,18 +1,19 @@
-The Big Picture
-===============
+Un primer vistazo
+=================
 
-Start using Symfony2 in 10 minutes! This tutorial walks you through some
-of the most important concepts behind Symfony2. It explains how to get started
-quickly by showing you the structure of a sample project.
+Iniciaremos usando Symfony2 en 10 minutos ! Este tutorial abarca algunos
+de los conceptos más importantes sobre los que esta construido Symfony2. 
+Se explicará como iniciar de forma rápida a través de un sencillo proyecto de ejemplo. 
 
-If you've used a web framework before, you should feel right at home with
-Symfony2. If not, welcome to a whole new way of developing web applications!
+Si usted ya ha usado un framework para desarrollo web, seguramente se sentirá
+como en casa con Symfony2. Si no es su caso, bienvenido a una nueva forma 
+para desarrollar aplicaciones web!
 
 .. index::
    pair: Sandbox; Download
 
-Downloading and Installing Symfony2
------------------------------------
+Descarga e instalación de Symfony2
+----------------------------------
 
 First, check that you have installed and configured a webserver (such as
 Apache) with PHP 5.3.2 or higher.
