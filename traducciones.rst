@@ -7,7 +7,7 @@ Traducción
 glossary.rst                                     charlieman       09/03/2011            99%
 index.rst                                        
 quick_tour/index.rst                             
-quick_tour/the_architecture.rst                  charlieman       09/03/2011            
+quick_tour/the_architecture.rst                  charlieman       09/03/2011            99%
 quick_tour/the_big_picture.rst                   
 quick_tour/the_controller.rst                    
 quick_tour/the_view.rst                          
