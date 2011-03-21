@@ -291,7 +291,7 @@ XML o PHP. Dele un vistazo a la configuración por omisión:
         ));
         */
 
-Cada entrada como ``framework`` define la configuración para un bundle.
+Cada entrada similar a ``framework`` define la configuración para un bundle.
 
 Cada :term:`entorno` puede sobre-escribir la configuración por omisión si
 provee un archivo de configuración específico:
