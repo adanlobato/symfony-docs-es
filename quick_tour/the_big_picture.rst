@@ -1,7 +1,7 @@
 Un primer vistazo
 =================
 
-Iniciaremos usando Symfony2 en 10 minutos ! Este tutorial abarca algunos
+Iniciaremos usando Symfony2 en solo 10 minutos ! Este capítulo abarca algunos
 de los conceptos más importantes sobre los que esta construido Symfony2. 
 Se explicará como iniciar de forma rápida a través de un sencillo proyecto de ejemplo. 
 
@@ -9,26 +9,28 @@ Si usted ya ha usado un framework para desarrollo web, seguramente se sentirá
 como en casa con Symfony2. Si no es su caso, bienvenido a una nueva forma 
 para desarrollar aplicaciones web!
 
-.. index::
-   pair: Sandbox; Download
+.. tip:
 
-Descarga e instalación de Symfony2
+    Quiere aprender por qué y cuando usar un framework ? Lea el documento
+    "`Symfony en 5 minutos`"
+
+Descarga de Symfony2
 ----------------------------------
 
-First, check that you have installed and configured a webserver (such as
-Apache) with PHP 5.3.2 or higher.
+Primero que todo, verfique que tiene instalado y configurado un servidor
+web (como Apache) con PHP 5.3.2 o superior. 
 
-Ready? Let's start by downloading Symfony2. To get started even faster, we are
-going to use the "Symfony2 sandbox". This is a preconfigured Symfony2 project
-that includes some simple controllers and their required libraries. The great
-advantage of the sandbox over other methods of installation is you can start
-experimenting with Symfony2 immediately.
+Listo ? Empezaremos por descargar "`la edición estándar de Symfony2`". Para facilitar las cosas aún
+más, usaremos el "Symfony2 sandbox". Este es un proyecto Symfony2 preconfigurado
+que incluye algunos controladores con sus respectivas librerías. La gran ventaja
+que tiene el sandbox sobre otros métodos de instalación es que se puede empezar
+a experimentar con Symfony2 inmediatamente. 
 
-Download the `sandbox`_, and unpack it in your root web directory. You
-should now have a ``sandbox/`` directory::
+Una vez descargue el `sandbox`_, extraigalo en el directorio raíz de su
+servidor web. Ahora debería tener un directorio `sandbox/` :: 
 
-    www/ <- your web root directory
-        sandbox/ <- the unpacked archive
+    www/ <- directorio raíz del servidor web
+        Symfony/ <- directorio que se extrajo
             app/
                 cache/
                 config/
@@ -47,71 +49,73 @@ should now have a ``sandbox/`` directory::
 .. index::
    single: Installation; Check
 
-Checking the Configuration
---------------------------
+Verificando la configuración
+----------------------------
 
-Symfony2 comes with a visual server configuration tester to help avoid some
-headaches that come from web server or PHP misconfiguration. Use the following
-url to see the diagnostics for your server:
+Symfony2 integra una interfaz visual para verificar la configuración del 
+servidor que es muy útil para solucionar problemas relacionados con la
+configuración del servidor web o de PHP. Use la siguiente url para 
+observar el diagnóstico: 
 
     http://localhost/sandbox/web/check.php
 
-Read the script output carefully and correct any oustanding issues.
+Revise atentamente el resultado y realice las correcciones pertinentes. 
 
-Now you can request your first "real" Symfony2 webpage:
+Ahora puede ejecutar su primera aplicación "real" Symfony2:  
 
     http://localhost/sandbox/web/app_dev.php/
 
-Symfony2 should congratulate you for your hard work so far!
+Symfony2 debería felicitarle por su arduo trabajo hasta el momento ! 
 
-Creating your first Application
--------------------------------
+Creando su primera aplicación
+-----------------------------
 
-The sandbox comes with a simple Hello World ":term:`application`" that we'll
-use to learn more about Symfony2. Go to the following URL to be greeted by
-Symfony2 (replace Fabien with your first name):
+El sandbox viene con una sencilla ":term:`applicación`" Hello World que
+usaremos para aprender más sobre Symfony2. Vaya a la siguiente URL para que
+Symfony2 le dé la bienvenida (reemplace Fabien por su primer nombre):  
 
     http://localhost/sandbox/web/app_dev.php/hello/Fabien
 
-What's going on here? Let's dissect the URL:
+Qué sucedió ? Bien, revisemos la url por partes: 
 
 .. index:: Front Controller
 
-* ``app_dev.php``: This is a "front controller". It is the unique entry point
-  of the application and it responds to all user requests;
+* ``app_dev.php``: Este es el "controlador frontal". Es el único punto
+  de entrada de la aplicación y el cual responde todos las solicitudes. 
 
-* ``/hello/Fabien``: This is the virtual path to the resource the user wants
-  to access.
+* ``/hello/Fabien``: Esta es la ruta virtual para el recurso que el el usuario 
+  quiere acceder.
 
-Your responsibility as a developer is to write the code that maps the user
-request (``/hello/Fabien``) to the resource associated with it (``Hello
-Fabien!``).
+La responsabiliad del desarrollador es escribir el código que mapea la
+petición del usuario (``/hello/Fabien``) a el recurso asociado con ésta. (``Hello
+Fabien!``). 
 
 .. index::
    single: Configuration
 
-Configuration
+Configuración
 ~~~~~~~~~~~~~
 
-Symfony2 configuration files can be written in PHP, XML or `YAML`_. The
-different types are compatible and may be used interchangeably within an
-application.
+Los archivos de configuración de Symfony2 puede ser escritos en PHP, XML o
+`YAML`_. Los diferentes tipos son compatibles entre sí y pueden ser usados
+entre aplicaciones. 
 
 .. tip::
 
-    The sandbox defaults to YAML, but you can easily switch to XML or PHP by
-    opening the ``app/AppKernel.php`` file and modifying the
-    ``registerContainerConfiguration`` method.
-
+    El sandbox usa por defecto el formato YAML, pero esto puede ser cambiado
+    fácilmente a XML o PHP editando el archivo ``app/AppKernel.php`` y
+    modificando el método ``registerContainerConfiguration``. 
+    
 .. index::
    single: Routing
    pair: Configuration; Routing
 
-Routing
-~~~~~~~
+Enrutamiento
+~~~~~~~~~~~~
 
-Symfony2 routes the request to your code by using a configuration file. Here
-are a few examples of the routing configuration file for our application:
+Symfony2 direcciona las peticiones a su código usando un archivo de configuración. Aquí
+hay unos ejemplos del archivo de configuración de enrutamiento para nuestras
+aplicaciones:  
 
 .. configuration-block::
 
@@ -155,10 +159,12 @@ are a few examples of the routing configuration file for our application:
 
         return $collection;
 
-The first few lines of the routing configuration file define the code that
-is executed when the user requests the resource specified by the pattern
-"``/``" (i.e. the homepage). Here, it executes the ``index`` method of
-the ``Default`` controller inside the ``FrameworkBundle``.
+Las primeras líneas del archivo de configuración de enrutamiento definen
+el código que es ejecutado cuando el usuario hace una petición al recurso
+especificado por el patrón "``/``" (i.e. the homepage). Aquí, se ejecutará
+el método ``index`` del controlador ``Default`` dentro de ``FrameworkBundle``. 
+
+
 
 Take a look at the last directive of the configuration file: Symfony2 can
 include routing information from other routing configuration files by using
