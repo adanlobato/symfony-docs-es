@@ -375,7 +375,7 @@ configuración. De hecho, una configuración puede heredar de otra:
         toolbar: true
         intercept_redirects: false
 
-El entorno ``dev`` (definido en ``config_dev.yml``) heredará archivo
+El entorno ``dev`` (definido en ``config_dev.yml``) heredará del archivo
 global ``config.yml`` y lo extenderá habilitando la barra de depuración
 web. 
 
