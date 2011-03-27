@@ -29,6 +29,6 @@ Cómo ayudar ?
 1. Leer la la guía de traducción y el glosario de términos
 2. Revisar la sección de asignación de traducciones en el wiki y ver que documentos se encuentran disponibles (o cuales se encuentran huérfanos).
 3. Crear un fork del repositorio
-2. Enviar un pull request con la sección a traducir
-3. Una vez se apruebe la petición, comenzar a traducir
-4. Enviar un pull request con los cambios
+4. Enviar un pull request con la sección a traducir
+5. Una vez se apruebe la petición, comenzar a traducir
+6. Enviar un pull request con los cambios
