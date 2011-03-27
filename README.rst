@@ -17,23 +17,18 @@ Para tener éxito en el proyecto de traducción se deben establecer un
 conjunto de normas que permitan a los traductores llevar un mismo 
 estilo para lograr uniformidad y coherencia. 
 
-Se sugiere que acojamos las `normas de traducción del proyecto Debian`_
-
 Un aspecto importante que deben tener en cuenta los traductores es la
 práctica con el framework mientras traducen, con el objetivo de entender de mejor
 manera los documentos. 
 
-TODO: 
+Lea la guía de traducción disponible en el wiki, antes de empezar.
 
-* Construir un glosario de términos técnicos como referencia para la
-  traducción. 
 
 Cómo ayudar ?
 -------------
-
-1. Crear un fork del repositorio
+1. Leer la la guía de traducción y el glosario de términos
+2. Revisar la sección de asignación de traducciones en el wiki y ver que documentos se encuentran disponibles (o cuales se encuentran huérfanos).
+3. Crear un fork del repositorio
 2. Enviar un pull request con la sección a traducir
 3. Una vez se apruebe la petición, comenzar a traducir
 4. Enviar un pull request con los cambios
-
-.. _`normas de traducción del proyecto Debian`: http://www.debian.org/international/spanish/notas
