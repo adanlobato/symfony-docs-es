@@ -24,8 +24,9 @@ manera los documentos.
 Lea la guía de traducción disponible en el wiki, antes de empezar.
 
 
-Cómo ayudar ?
--------------
+¿ Cómo ayudar ?
+----------------
+
 1. Leer la la guía de traducción y el glosario de términos
 2. Revisar la sección de asignación de traducciones en el wiki y ver que documentos se encuentran disponibles (o cuales se encuentran huérfanos).
 3. Crear un fork del repositorio
