@@ -57,7 +57,7 @@ book/forms/overview.rst
 book/forms/view.rst
 book/from_flat_php_to_symfony2.rst
 book/http_cache.rst
-book/http_fundamentals.rst
+book/http_fundamentals.rst          jesuscolorozco
 book/index.rst
 book/internals/event_dispatcher.rst
 book/internals/index.rst
