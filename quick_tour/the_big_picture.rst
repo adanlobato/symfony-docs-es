@@ -1,40 +1,40 @@
 Un primer vistazo
 =================
 
-Iniciaremos usando Symfony2 en tan solo 10 minutos !. Este capítulo 
+Iniciaremos usando Symfony2 en tan solo 10 minutos. Este capítulo 
 abarca algunos de los conceptos más importantes sobre los que esta 
 construido Symfony2. Explicaremos como iniciar de forma rápida a través 
 de un sencillo proyecto de ejemplo. 
 
 Si ya has usado un framework para desarrollo web, seguramente te 
 sentirás a gusto con Symfony2. Si no es tu caso, bienvenido a una nueva 
-forma de desarrollar aplicaciones web!
+forma de desarrollar aplicaciones web.
 
 .. tip:
 
-    Quieres aprender por qué y cuando usar un framework ? Lee el documento
+    ¿ Quieres aprender por qué y cuando usar un framework ? Lee el documento
     "`Symfony en 5 minutos`_"
 
 Descarga de Symfony2
-----------------------------------
+--------------------
 
 Primero que todo, verfica que tienes instalado y configurado un servidor
 web (como Apache) con PHP 5.3.2 o superior. 
 
-Listo ? Empecemos por descargar la "`edición estándar de Symfony2`_", una
+¿ Listo ? Empecemos por descargar la "`edición estándar de Symfony2`_", una
 :term:`distribución` de Symfony que se encuentra preconfigurada para la mayoría
 de casos y que también contiene código de ejemplo que demuestra cómo usar 
-Symfony2 (puedes obtener un paquete con incluya los *vendors* para empezar 
+Symfony2 (puedes obtener un paquete que incluya los *vendors* para empezar 
 aún más rápido).  
 
-Después de extraer el paquete bajo el directorio raíz de su servidor 
-web, deberías tener un directorio ``Symfony`` con una estructura como
+Después de extraer el paquete bajo el directorio raíz del servidor web, 
+deberías tener un directorio ``Symfony/`` con una estructura como
 se muestra a continuación: 
 
 .. code-block:: text
 
     www/ <- directorio raíz del servidor web
-        Symfony/ <- directorio que se extrajo
+        Symfony/ <- directorio extraído
             app/
                 cache/
                 config/
@@ -51,11 +51,12 @@ se muestra a continuación:
             web/
                 app.php
 
+
 Verificando la configuración
 ----------------------------
 
-Symfony2 integra una interfaz visual para probar la configuración del servidor 
-muy útil para solucionar problemas relacionados con el servidor web o 
+Symfony2 integra una interfaz visual para probar la configuración del 
+servidor, muy útil para solucionar problemas relacionados con el servidor web o 
 por una incorrecta configuración de PHP. Usa la siguiente url para 
 observar el diagnóstico: 
 
@@ -72,14 +73,13 @@ para ver tu primera aplicación "real" en Symfony2:
 
     http://localhost/Symfony/web/app_dev.php/
 
-Symfony2 debería felicitarte por tú arduo trabajo hasta el momento ! 
+Symfony2 debería felicitarte por tú arduo trabajo hasta el momento.
 
-
-Entiendo los fundamentos
-------------------------
+Comprender los fundamentos
+---------------------------
 
 Uno de los principales objetivos de un framework es garantizar la 
-`separación de responsabilidades`_. Mantiene tu código organizado y le
+`separación de responsabilidades`_. Mantiene tu código organizado y 
 permite a tu aplicación crecer fácilmente en el tiempo evitando la mezcla
 de llamados a bases de datos, etiquetas HTML y código de lógica de negocio
 en un mismo archivo. Para lograr este objetivo, debes aprender algunos
@@ -87,11 +87,10 @@ conceptos y términos fundamentales.
 
 .. tip::
     
-    Quieres más pruebas de que usar un framework es mucho mejor que mezclar
-    todo en un mismo archivo ? Lee el capítulo "`De PHP plano a Symfony2`_"
-    del libro.
+    ¿ Quieres más pruebas de que usar un framework es mucho mejor que mezclar
+    todo en un mismo archivo ? Lee el capítulo del libro:"`De PHP plano a Symfony2`_"
 
-La distribución viene con algunos ejemplos de código que usarás para aprender
+La distribución viene con algunos ejemplos de código que puedes usar para aprender
 más sobre los principales conceptos de Symfony2. Ingresa a la siguiente 
 URL para ser saludado por Symfony2 (reemplaza *Fabien* por tu primer nombre):
 
@@ -99,10 +98,10 @@ URL para ser saludado por Symfony2 (reemplaza *Fabien* por tu primer nombre):
 
     http://localhost/Symfony/web/app_dev.php/demo/hello/Fabien
 
-Qué sucedió ? Bien, revisemos la url por partes: 
+¿ Qué sucedió ? Bien, revisemos la url por partes: 
 
 * ``app_dev.php``: Este es el :term:`controlador frontal`. Es el único punto
-  de entrada de la aplicación y el cual responde todos las solicitudes. 
+  de entrada de la aplicación y el cual responde todas las solicitudes del usuario. 
 
 * ``/demo/hello/Fabien``: Esta es la *ruta virtual* del recurso que el usuario 
   quiere acceder.
@@ -124,17 +123,17 @@ archivo de configuración ``app/config/routing.yml``:
     # app/config/routing.yml
     _welcome:
         pattern:  /
-        defaults: { _controller: AcmeDemoBundle:Welcome:index }
+        defaults: { _controller: AcmeDemo:Welcome:index }
 
     _demo:
-        resource: "@AcmeDemoBundle/Controller/DemoController.php"
+        resource: "@AcmeDemo/Controller/DemoController.php"
         type:     annotation
         prefix:   /demo
 
 Las primeras tres líneas del archivo de configuración de enrutamiento definen
 el código que es ejecutado cuando el usuario hace una petición al recurso
 especificado por el patrón "``/``" (i.e. la página inicial). Cuando este
-recurso es solicitado, el controlador  ``AcmeDemoBundle:Welcome:index`` 
+recurso es solicitado, el controlador  ``AcmeDemo:Welcome:index`` 
 será ejecutado. 
 
 .. tip::
@@ -168,11 +167,11 @@ simple posible crea una respuesta, basado en la petición::
     No te dejes engañar por la simpleza de los conceptos y el poder que 
     encierran. Lee el capítulo "`La especificación HTTP y Symfony2`_" del
     libro para conocer más sobre cómo Symfony2 aprovecha el protocolo 
-    HTTP y por qué éste hace las cosas más simples y más poderosas al 
+    HTTP y por qué éste hace las cosas más simples y poderosas al 
     mismo tiempo. 
 
 Symfony2 elige el controlador basado en el valor del parámetro ``_controller``
-del archivo de configuración de enrutamiento: ``AcmeDemoBundle:Welcome:index``.
+del archivo de configuración de enrutamiento: ``AcmeDemo:Welcome:index``.
 Esta cadena de texto es el *nombre lógico* del controlador y hace referencia
 al método ``indexAction`` de la clase 
 ``Acme\DemoBundle\Controller\WelcomeController``::
@@ -192,7 +191,7 @@ al método ``indexAction`` de la clase
 
 .. tip::
 
-    También habrías podido usar
+    También puedes usar
     ``Acme\DemoBundle\Controller\WelcomeController::indexAction`` como valor
     del parámetro ``_controller``, pero si sigues algunas convenciones
     sencillas, el nombre lógico es más conciso y permite mayor flexibilidad. 
@@ -200,14 +199,14 @@ al método ``indexAction`` de la clase
 La clase controlador extiende de la clase ``Controller`` (incluída en el framework),
 la cual provee métodos muy útiles, como el método
 :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::render`
-que carga y muestra una plantilla (``AcmeDemoBundle:Welcome:index.html.twig``).
+que carga y muestra una plantilla (``AcmeDemo:Welcome:index.html.twig``).
 El valor retornado es un objeto Response que almacena el contenido 
-renderizado. De esta manera, en caso de ser necesario, la respuesta (el
+transformado. De esta manera, en caso de ser necesario, la respuesta (el
 objeto Response) puede ser adaptada antes de ser enviada al navegador::
 
     public function indexAction()
     {
-        $response = $this->render('AcmeDemoBundle:Welcome:index.txt.twig');
+        $response = $this->render('AcmeDemo:Welcome:index.txt.twig');
         $response->headers->set('Content-Type', 'text/plain');
 
         return $response;
@@ -220,7 +219,7 @@ objeto Response) puede ser adaptada antes de ser enviada al navegador::
     (conocidas también como closures). El capítulo "`El Controlador`_"
     del libro te enseñará todo sobre los controladores en Symfony2. 
 
-El nombre de la plantilla, ``AcmeDemoBundle:Welcome:index.html.twig``, 
+El nombre de la plantilla, ``AcmeDemo:Welcome:index.html.twig``, 
 es el *nombre lógico* de la plantilla  y hace referencia al archivo 
 ``src/Acme/DemoBundle/Resources/views/Welcome/index.html.twig``. De nuevo, 
 más adelante en la sección bundles se explicará  la utilidad de estos 
@@ -233,13 +232,13 @@ enrutamiento:
 
     # app/config/routing.yml
     _demo:
-        resource: "@AcmeDemoBundle/Controller/DemoController.php"
+        resource: "@AcmeDemo/Controller/DemoController.php"
         type:     annotation
         prefix:   /demo
 
 Symfony2 puede leer la información de enrutamiento desde diferentes
 recursos escritos en YAML, XML, PHP o embebidos en anotaciones PHP. Aquí,
-el *nombre lógico* del recurso es ``@AcmeDemoBundle/Controller/DemoController.php`` 
+el *nombre lógico* del recurso es ``@AcmeDemo/Controller/DemoController.php`` 
 y hace referencia al archivo src/Acme/DemoBundle/Controller/DemoController.php``. 
 En este archivo, las rutas están definidas como anotaciones sobre los métodos
 que involucran acciones::
@@ -290,12 +289,12 @@ Plantillas
 
 El controlador ejecuta la plantilla 
 ``src/Acme/DemoBundle/Resources/views/Demo/hello.html.twig`` (o 
-``AcmeDemoBundle:Demo:hello.html.twig`` si tu usas el nombre lógico): 
+``AcmeDemo:Demo:hello.html.twig`` si usas el nombre lógico): 
 
 .. code-block:: jinja
 
     {# src/Acme/DemoBundle/Resources/views/Demo/hello.html.twig #}
-    {% extends "AcmeDemoBundle::layout.html.twig" %}
+    {% extends "AcmeDemo::layout.html.twig" %}
 
     {% block title "Hello " ~ name %}
 
@@ -310,8 +309,8 @@ te enseñará como trabajan las plantillas en Symfony2.
 Bundles
 ~~~~~~~
 
-Puede que te hayas preguntado por qué la palabra :term:`bundle` es usada
-en muchos de los nombres que hemos visto hasta ahora. Todo el código que 
+Puede que te hayas preguntado ¿ por qué la palabra :term:`bundle` es usada
+en muchos de los nombres que hemos visto hasta ahora ? Todo el código que 
 escribas para tu aplicación es organizado en bundles. En el vocabulario
 de Symfony2, un bundle es un grupo estructurado de archivos (archivos PHP, 
 hojas de estilo, JavaScripts, imágenes, ...) que implementan una única
@@ -331,8 +330,8 @@ sobre el raro número hexadecimal para revelar otra útil herramienta de
 depuración de Symfony2: El profiler.  
 
 Desde luego, estas herramientas no deben estar disponibles cuando despliegues
-tu aplicación en producción. Es por eso que encontrarás otro controlador
-frontal in el directorio ``web/`` (``app.php``), optimizado para el 
+tu aplicación en un ambiente de producción. Es por eso que encontrarás otro controlador
+frontal en el directorio ``web/`` (``app.php``), optimizado para el 
 entorno de producción: 
 
 .. code-block:: text
@@ -348,7 +347,7 @@ el uso de ``app.php`` en la URL:
 
 Como última cosa pero no menos importante, en los servidores de producción,
 deberías apuntar el directorio raíz del servidor web al directorio ``web/``
-para asegurar tu instalación y tener un URL más amigable: 
+para asegurar tu instalación y tener una URL más amigable: 
 
 .. code-block:: text
 
@@ -360,7 +359,7 @@ una cache bajo el directorio ``app/cache``. En el entorno de desarrollo
 hagas cambios al código o la configuración. Pero no será el caso del 
 ambiente de producción (``app.php``) para hacer que el rendimiento sea
 mejor; este es el porqué tú siempre debes usar el entorno de desarrollo
-cuando desarrollas tu aplicación.  
+cuando construyas tu aplicación.  
 
 Diferentes :term:`entornos` de una aplicación diferirán solo en su 
 configuración. De hecho, una configuración puede heredar de otra: 
